@@ -26,34 +26,32 @@
     
     Если пользователь нажмет Cancel, прекратить выполнение цикла.
   */
-  
- const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
- let attempts = 3;
- let userInput
- let confirm = false;
- 
- do {
-   userInput = prompt("Введите пароль:"); 
-   for (const value of passwords) {
-     if (userInput === null) {
-       break;
-     }
-     if (userInput === value) {
-       alert("Добро пожаловать!");
-       confirm = true; 
-       break;
-     }
-   }
-   attempts -= 1; 
-   if (attempts !== 0 && !confirm && userInput !== null) {
-     alert(`Неверный пароль, у вас осталось ${attempts} попыток`);
-   }
- } while (attempts !== 0 && !confirm && userInput !== null); 
- 
- if (attempts === 0 && !confirm && userInput !== null) {
-   alert("У вас закончились попытки, аккаунт заблокирован!");
- } else if (userInput === null) {
-   alert("Очень жаль!");
- }
 
+const passwords = ["qwerty", "111qwe", "123123", "r4nd0mp4zzw0rd"];
+let attempts = 3;
+let userInput;
+let confirm = false;
 
+do {
+  userInput = prompt("Введите пароль:");
+  for (const value of passwords) {
+    if (userInput === null) {
+      break;
+    }
+    if (userInput === value) {
+      alert("Добро пожаловать!");
+      confirm = true;
+      break;
+    }
+  }
+  attempts -= 1;
+  if (attempts !== 0 && !confirm && userInput !== null) {
+    alert(`Неверный пароль, у вас осталось ${attempts} попыток`);
+  }
+} while (attempts !== 0 && !confirm && userInput !== null);
+
+if (attempts === 0 && !confirm && userInput !== null) {
+  alert("У вас закончились попытки, аккаунт заблокирован!");
+} else if (userInput === null) {
+  alert("Очень жаль!");
+}

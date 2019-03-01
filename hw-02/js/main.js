@@ -20,23 +20,22 @@
       'Было введено не число, попробуйте еще раз', при этом результат prompt записывать 
       в массив чисел не нужно, после чего снова пользователю предлагается ввести число в prompt.
 */
-{
-  let userInput;
-  const numbers = [];
-  let total = 0;
-  
-    while (userInput !== null) {
-      userInput = prompt("Введите число :");
-      if (userInput !== null) {
-        numbers.push(userInput);
-      }
+
+let userInput;
+const numbers = [];
+let total = 0;
+
+while (userInput !== null) {
+  userInput = prompt("Введите число :");
+  if (userInput !== null) {
+    numbers.push(userInput);
   }
-  
-  console.log(numbers);
-  
-  for (let el of numbers) {
-    total = Number(el) + total;
-  }
-  
-  console.log(`Общая сумма чисел равна ${total}`);
-  }
+}
+
+console.log(numbers);
+
+for (let el of numbers) {
+  total = Number(el) + total;
+}
+
+console.log(`Общая сумма чисел равна ${total}`);
