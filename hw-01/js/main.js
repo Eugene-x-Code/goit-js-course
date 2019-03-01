@@ -23,7 +23,7 @@
 */
 
 const adminLogin = "admin";
-const adminPassword = "m4ngo1zh4ackz0r";
+const adminPassword = "123";
 
 const userLoginInput = prompt("Введите логин:");
 const userAlertCancel = "Отменено пользователем!";

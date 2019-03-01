@@ -38,7 +38,7 @@ let confirmCheck;
 // VALIDATION CHECK
 if (userInput === null) {
   alert("Нам очень жаль, приходите еще!");
-} else if (Number.isNaN(Number(userInput)) || Number(userInput) <= 0) {
+} else if (Number(userInput) <= 0 || !Number.isInteger(Number(userInput))) {
   alert("Ошибка");
 } else {
   validCheck = true;
