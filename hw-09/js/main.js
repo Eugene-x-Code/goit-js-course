@@ -121,13 +121,15 @@ class Timer {
   stop() {
     clearInterval(this.timerId);
     this.timerId = null;
-
     this.isActive = false;
     btnStart.textContent = "Continue";
   }
 
   reset() {
-    lap.innerHTML = "";
+    lap.innerHTML = '';
+    clearInterval(this.timerId);
+    this.timerId = null;
+    this.isActive = false;
     timerFace.textContent = `00:00.0`;
     this.deltaTime = 0;
     btnStart.textContent = "Start";
@@ -145,13 +147,9 @@ btnStart.addEventListener("click", () => {
 });
 
 btnReset.addEventListener("click", () => {
-  if (!newTimer.isActive) {
     newTimer.reset();
-  }
 });
 
 laps.addEventListener("click", () => {
-  if (!newTimer.isActive) {
     newTimer.lap();
-  }
 });
