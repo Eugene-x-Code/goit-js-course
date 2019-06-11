@@ -1,0 +1,28 @@
+body {
+  height: 100vh;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  font-size: 40px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  margin-right: 10px;
+}
