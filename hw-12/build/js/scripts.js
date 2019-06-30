@@ -15,14 +15,14 @@ function allUrls(mas) {
 }
 
 function checkValidUrl(url) {
-  var pattern = /^(ftp|http|https):\/\/[^ "]+$/;
+  var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
   var result = pattern.test(url);
   var isWritted = urls.some(function (el) {
     return el.url === url;
   });
 
   if (result && !isWritted) {
-    fetch("https://api.linkpreview.net/?key=5cd71a29bf3526610f7d14eb637f134f14713b1c85043&q=".concat(url)).then(function (resp) {
+    fetch("http://api.linkpreview.net/?key=5d186a9733a915fec640a1bd24b0c4ff1f9ab2ebd6493&q=".concat(url)).then(function (resp) {
       if (resp.ok) return resp.json();
       throw new Error('Error' + resp.statusText);
     }).then(function (data) {

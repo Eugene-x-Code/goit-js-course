@@ -20,7 +20,7 @@ function checkValidUrl(url) {
   const isWritted = urls.some( el => el.url === url);
   if(result && !isWritted) {
     
-    fetch(`https://api.linkpreview.net/?key=5cd71a29bf3526610f7d14eb637f134f14713b1c85043&q=${url}`)
+    fetch(`http://api.linkpreview.net/?key=5d186a9733a915fec640a1bd24b0c4ff1f9ab2ebd6493&q=${url}`)
     .then(resp => {
       if(resp.ok) return resp.json();
 
