@@ -4,7 +4,7 @@
   "main": "webpack.config.js",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "handlebars": "^4.3.0",
     "handlebars-loader": "^1.7.1",
     "mini-css-extract-plugin": "^0.6.0",
